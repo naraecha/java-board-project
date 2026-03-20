@@ -108,7 +108,7 @@ public class Main {
                         break;
                     }
 
-                    postService.listAll();
+                    postService.listAllWithComments(commentService);
 
                     System.out.print("삭제할 글 번호: ");
                     int postId = sc.nextInt();
@@ -122,7 +122,7 @@ public class Main {
                         break;
                     }
 
-                    postService.listAll();
+                    postService.listAllWithComments(commentService);
 
                     System.out.print("게시글 번호: ");
                     int pId = sc.nextInt();
@@ -141,7 +141,7 @@ public class Main {
                         break;
                     }
 
-                    postService.listAll();
+                    postService.listAllWithComments(commentService);
 
                     System.out.print("게시글 번호: ");
                     int pId2 = sc.nextInt();
