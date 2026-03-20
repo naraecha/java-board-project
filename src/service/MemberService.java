@@ -39,7 +39,7 @@ public class MemberService {
     public Member login(String email, String password) {
         for (Member m : members) {
             if (m.getEmail().equals(email) && m.getPassword().equals(password)) {
-                System.out.printf("로그인 성공 : %d님 환영합니다!", m.getName());
+                System.out.printf("로그인 성공 : %s님 환영합니다!", m.getName());
                 return m;
             }
         }

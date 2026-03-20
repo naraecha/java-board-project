@@ -51,6 +51,6 @@ public class Post {
     @Override
     public String toString() {
         // TODO 4-5: "[1] 제목 (작성자: 이름)" 형식
-        return "[" + postId + "] 제목 (작성자: " + memberName + ")";
+        return "\n-----------------" + "[" + postId + "] " + title + " (작성자: " + memberName + ")\n" + content;
     }
 }

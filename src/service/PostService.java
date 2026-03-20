@@ -63,4 +63,16 @@ public class PostService {
 
         return true;
     }
+    public void listAllWithComments(CommentService commentService) {
+        if (posts.isEmpty()) {
+            System.out.println("게시글이 없습니다.");
+            return;
+        }
+
+        for (Post p : posts) {
+            System.out.println(p);
+            commentService.listByPost(p.getPostId());
+        }
+    }
+
 }
