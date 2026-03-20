@@ -1,29 +1,42 @@
 package model;
 
 public class Member {
+    // static idCounter 필드 선언
+    static int idCounter = 1;
 
-    // TODO 1-1: static idCounter 필드 선언 (초기값 1)
-    /* TODO */
-
-    private int    memberId;
+    // postId, memberId, memberName, title, content 필드 선언
+    private int memberId;
     private String name;
     private String email;
     private String password;
 
+    // 자동 채번 및 필드 초기화
     public Member(String name, String email, String password) {
-        // TODO 1-2: memberId 자동 채번
-        /* TODO */
-        this.name     = name;
-        this.email    = email;
+        this.memberId = idCounter++;
+        this.name = name;
+        this.email = email;
         this.password = password;
     }
+    /// ////////////////////////
+    // getter 5개 구현
+    public int getMemberId() {
+        return memberId;
+    }
 
-    // TODO 1-3: getMemberId(), getName(), getEmail(), getPassword() 구현
-    /* TODO */
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 
     @Override
     public String toString() {
-        // TODO 1-4: "[1] Alice (alice@test.com)" 형식으로 반환
-        /* TODO */
+        return String.format("[%d] %s (%s)", memberId, name, email);
     }
 }
