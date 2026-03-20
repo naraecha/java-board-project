@@ -10,13 +10,13 @@ public class CommentService {
 
     public Comment write(int postId, Member author, String content) {
         // TODO 8-1: Comment 생성 → 추가 → 메시지 출력 → 반환
-        Coment coment = new Comment(postId, author.getMemberId, author.getName, content);
+        Comment comment = new Comment(postId, author.getMemberId(), author.getName(), content);
 
-        comments.add(content);
+        comments.add(comment);
 
         System.out.println("댓글이 작성되었습니다.");
 
-        return coment;
+        return comment;
     }
 
     public void listByPost(int postId) {
@@ -55,7 +55,7 @@ public class CommentService {
             return false;
         }
 
-        if (target.getMemberId() != loginMember.getgetMemberId()) {
+        if (target.getMemberId() != loginMember.getMemberId()) {
             System.out.println("본인이 작성한 댓글만 삭제할 수 있습니다.");
             return false;
         }
