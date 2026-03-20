@@ -15,14 +15,22 @@ public class Main {
 
         Member loginMember = null;
 
+        System.out.println("╔══════════════════════════════════════════╗");
+        System.out.println("║     ★  Java Community BBS v1.0  ★       ║");
+        System.out.println("║      ArrayList × OOP 실습 프로젝트         ║");
+        System.out.println("╚══════════════════════════════════════════╝");
+
         while (true) {
-            System.out.println("\n=== 메인 메뉴 ===");
-            System.out.println("1. 회원가입");
-            System.out.println("2. 회원목록");
-            System.out.println("3. 로그인");
-            System.out.println("4. 게시글 목록");
-            System.out.println("5. 종료");
-            System.out.print("선택: ");
+            System.out.println("┌─────────────────────────────┐");
+            System.out.println("│        [ 메 인 메 뉴 ]       │");
+            System.out.println("├─────────────────────────────┤");
+            System.out.println("│  1. 회원 가입                │");
+            System.out.println("|  2. 회원 목록 보기            │");
+            System.out.println("│  3. 로그인                   │");
+            System.out.println("│  4. 게시글 목록 보기           │");
+            System.out.println("│  5. 종료                     │");
+            System.out.println("└─────────────────────────────┘");
+            System.out.print("▶ 선택: ");
 
             int menu = sc.nextInt();
             sc.nextLine();
